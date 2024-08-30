@@ -1,3 +1,5 @@
+# **In-class: Programming with LLMs**
+
 Use a language model to write a program that does the following:
 
 1.Takes a text string as input
@@ -12,11 +14,10 @@ Hint: TextBlob
 Extra Credit:
 
 II  Use a language model to help your team solve HackerRank coding problems, in the language of your choice:
-https://www.hackerrank.com/domains/javaLinks to an external site.
-https://www.hackerrank.com/domains/cLinks to an external site.
-https://www.hackerrank.com/domains/pythonLinks to an external site.
-https://www.hackerrank.com/domains/cppLinks to an external site.
+* https://www.hackerrank.com/domains/javaLinks to an external site.
+* https://www.hackerrank.com/domains/cLinks to an external site.
+* https://www.hackerrank.com/domains/pythonLinks to an external site.
+* https://www.hackerrank.com/domains/cppLinks to an external site.
 1.One each of: Easy, Medium, Hard
-            First, use a simplistic prompt, and show the initial score from HackerRank
-
-            Second, use Prompt Engineering techniques to refine your answer, and show the HackerRank score for the improved answer
+* First, use a simplistic prompt, and show the initial score from HackerRank
+* Second, use Prompt Engineering techniques to refine your answer, and show the HackerRank score for the improved answer
