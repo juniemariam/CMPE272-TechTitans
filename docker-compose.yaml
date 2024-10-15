@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+  dj:
+    container_name: dj
+    build: Backend
+    command: python manage.py runserver 0.0.0.0:80
+    volumes:
+      - ./Backend:/code
+    ports:
+      - "80:80"
+    depends_on:
+      - db
