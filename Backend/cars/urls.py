@@ -22,4 +22,5 @@ from carsAPI import views as carsAPI_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/cars/', carsAPI_views.CarListView.as_view(), name='car-list'),
+    path('api/cars/<int:car_id>/', carsAPI_views.CarDetail.as_view(), name='car-detail'),
 ]
