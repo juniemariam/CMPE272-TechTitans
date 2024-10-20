@@ -2,10 +2,37 @@
 
   <ul>
     <li *ngFor="let car of cars$ | async">
-      <ul>
-        <li>Title: {{ car.car_title }}</li>
-        <li>Description: {{ car.description }}</li>
-        <li>Created on: {{ car.created_on }}</li>
-      </ul>
+  
+      <form #f="ngForm" (ngSubmit)="updateCarDetails(car)">
+  
+        Title: <input #car_title="ngModel" type="text" name="car_title" [(ngModel)]="car.car_title" [disabled]="!car.isEditable" />
+        <div *ngIf="car_title.invalid && car_title.errors?.['required']">Title is required</div>
+        <br>
+  
+        Description: <input #description="ngModel" type="text" name="description" [(ngModel)]="car.description" [disabled]="!car.isEditable" />
+        <div *ngIf="description.invalid && description.errors?.['required']">description is required</div>
+        <br>
+  
+        Created On: <input #created_on="ngModel" type="text" name="created_on" [(ngModel)]="car.created_on" [disabled]="!car.isEditable" />
+        <div *ngIf="created_on.invalid && created_on.errors?.['required']">Created Date is required</div>
+        <br>
+  
+        <button *ngIf="!car.isEditable" (click)="car.isEditable=!car.isEditable">Edit</button>
+        <button type="submit" *ngIf="car.isEditable">Save</button>
+        <button type="button" (click)=deleteCarDetails(car.id)>Delete</button>
+      </form>
+  
     </li>
   </ul>
+
+  <h2>Add Car Details</h2>
+<form [formGroup]="car_details_form" (ngSubmit)="onSubmit()">
+
+    <label for="car_title">Car Title</label>
+    <input type="text" formControlName="car_title" required>
+    <br>
+    <label for="description">Description</label>
+    <input type="text" formControlName="description" required>
+	<br>
+    <button type="submit" [disabled]="car_details_form.invalid">Add Car Details</button>
+</form>

@@ -3,4 +3,5 @@ export interface Cars {
     car_title: string;
     description: string;
     created_on: Date;
+    isEditable?: boolean;
   }
