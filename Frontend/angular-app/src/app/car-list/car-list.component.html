@@ -1,1 +1,11 @@
-<p>car-list works!</p>
+<h2>Cars List</h2>
+
+  <ul>
+    <li *ngFor="let car of cars$ | async">
+      <ul>
+        <li>Title: {{ car.car_title }}</li>
+        <li>Description: {{ car.description }}</li>
+        <li>Created on: {{ car.created_on }}</li>
+      </ul>
+    </li>
+  </ul>

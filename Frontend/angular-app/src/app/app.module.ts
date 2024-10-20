@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
     // CarListComponent  // Declare CarListComponent here
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
