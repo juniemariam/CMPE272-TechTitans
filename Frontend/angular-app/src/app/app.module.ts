@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 // import { CarListComponent } from './car-list/car-list.component';  // Import CarListComponent
 
 @NgModule({
@@ -13,8 +14,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
-  ],
+    FormsModule,
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })

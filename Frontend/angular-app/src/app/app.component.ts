@@ -11,4 +11,5 @@ import { CarListComponent } from './car-list/car-list.component';
 })
 export class AppComponent {
   title = 'angular-app';
+  
 }

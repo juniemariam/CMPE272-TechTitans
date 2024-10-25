@@ -5,7 +5,7 @@ from datetime import date
 # Create the Task class to describe the model.
 class CarList(models.Model):
     """Stores a task."""                                                
-    car_tile = models.CharField(max_length=50)
+    car_title = models.CharField(max_length=50)
     description = models.CharField(max_length=50)
 
     # Date the car details was uploaded was created.
